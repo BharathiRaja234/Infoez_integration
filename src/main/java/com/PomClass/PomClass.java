@@ -1,5 +1,7 @@
 package com.PomClass;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -240,8 +242,33 @@ public class PomClass {
 		public WebElement rolecheck;
 		
 		
+		@FindBy(xpath = "//button[@id='radix-:r3:']")
+		public WebElement menudropprofile;
 		
+		@FindBy(xpath = "//div[@data-testid='menu-admin']")
+		public WebElement admindropmenu;
 		
+		@FindBy(xpath = "//a[@data-testid='admin-nav-businesses']")
+		public WebElement businessbtn;
+		
+		@FindBy(xpath = "//button[contains(@data-testid,'admin-verify-business-btn-857fc')]")
+		public WebElement verifybtn;
+		
+		@FindBy(xpath = "//div[text()='Verified']")
+		public WebElement verifyconfrm;
+		
+		@FindBy(xpath = "class=\"rounded-xl border border-border bg-card p-4 flex items-center justify-between\"")
+		public List<WebElement> beforeadd;
+		
+		@FindBy(xpath = "//input[@data-testid='new-category-name']")
+		public WebElement categoryname;
+		
+		@FindBy(xpath = "//button[@data-testid='new-category-add']")
+		public WebElement addcategory;
+		
+		@FindBy(xpath = "//button[@data-testid=\"filter-category\"]")
+		public WebElement allcategories;
+
 		
 		
 		

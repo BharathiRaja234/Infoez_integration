@@ -12,7 +12,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src\\test\\java\\feature\\userrole.feature",glue={"com.StepDefinition"},
+@CucumberOptions(features="src\\test\\java\\feature\\category.feature",glue={"com.StepDefinition"},
 dryRun = !false,plugin = { "pretty" ,"summary","html:target/html/report.html"})
 
 

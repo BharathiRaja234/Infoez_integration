@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -22,6 +23,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.PomClass.PomClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -211,6 +214,20 @@ public class BaseClass {
 		fileInput.sendKeys(filePath);
 	}
 	    
+	
+	public boolean Category(String category) {
+		PomClass pm =new PomClass(driver);
+		Select s = new Select(pm.allcategories);
+		List<WebElement> options = s.getOptions();
+		
+		for(WebElement option : options) {
+			if(option.getText().trim().equalsIgnoreCase(category)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	}
 
 
